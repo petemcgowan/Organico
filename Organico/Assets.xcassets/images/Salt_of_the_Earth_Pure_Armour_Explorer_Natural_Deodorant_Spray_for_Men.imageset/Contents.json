@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Salt_of_the_Earth_Pure_Armour_Explorer_Natural_Deodorant_Spray_for_Men.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

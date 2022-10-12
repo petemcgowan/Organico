@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Dr_Bronners_Organic_Shaving_Gel_Lavender.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
