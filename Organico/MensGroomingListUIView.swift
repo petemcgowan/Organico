@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MensGroomingListUIView: View {
     var body: some View {
+        VStack(spacing: 8) {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         Text("2")
+        }
     }
 }
 
