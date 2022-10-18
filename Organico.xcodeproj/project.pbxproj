@@ -11,6 +11,10 @@
 		2C654B8D28F4C21B001BC820 /* Mens Grooming.md in Resources */ = {isa = PBXBuildFile; fileRef = 2C654B8C28F4C21B001BC820 /* Mens Grooming.md */; };
 		2C654B9028F638BE001BC820 /* MensGroomingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C654B8F28F638BE001BC820 /* MensGroomingModel.swift */; };
 		2C654B9328F63A97001BC820 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C654B9228F63A97001BC820 /* Double.swift */; };
+		2C6BDA7628FE34DE00577AA3 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BDA7528FE34DE00577AA3 /* ItemDetailView.swift */; };
+		2C6BDA7828FE354F00577AA3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BDA7728FE354F00577AA3 /* CartView.swift */; };
+		2C6BDA7A28FE3E7C00577AA3 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BDA7928FE3E7C00577AA3 /* SecondView.swift */; };
+		2C6BDA7C28FE455D00577AA3 /* Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6BDA7B28FE455D00577AA3 /* Writer.swift */; };
 		2CDC2FE428F27403000A2CED /* OrganicoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC2FE328F27403000A2CED /* OrganicoApp.swift */; };
 		2CDC2FE628F27403000A2CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC2FE528F27403000A2CED /* ContentView.swift */; };
 		2CDC2FE828F27407000A2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDC2FE728F27407000A2CED /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		2C654B8C28F4C21B001BC820 /* Mens Grooming.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Mens Grooming.md"; sourceTree = SOURCE_ROOT; };
 		2C654B8F28F638BE001BC820 /* MensGroomingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensGroomingModel.swift; sourceTree = "<group>"; };
 		2C654B9228F63A97001BC820 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		2C6BDA7528FE34DE00577AA3 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		2C6BDA7728FE354F00577AA3 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		2C6BDA7928FE3E7C00577AA3 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		2C6BDA7B28FE455D00577AA3 /* Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Writer.swift; sourceTree = "<group>"; };
 		2CDC2FE028F27403000A2CED /* Organico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Organico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDC2FE328F27403000A2CED /* OrganicoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicoApp.swift; sourceTree = "<group>"; };
 		2CDC2FE528F27403000A2CED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,7 +87,11 @@
 				2C654B9128F63A78001BC820 /* Extensions */,
 				2C654B8E28F63865001BC820 /* Models */,
 				2CDC2FE328F27403000A2CED /* OrganicoApp.swift */,
+				2C6BDA7928FE3E7C00577AA3 /* SecondView.swift */,
+				2C6BDA7B28FE455D00577AA3 /* Writer.swift */,
 				2CDC2FE528F27403000A2CED /* ContentView.swift */,
+				2C6BDA7528FE34DE00577AA3 /* ItemDetailView.swift */,
+				2C6BDA7728FE354F00577AA3 /* CartView.swift */,
 				2C654B8A28F47C76001BC820 /* MensGroomingListUIView.swift */,
 				2CDC2FE728F27407000A2CED /* Assets.xcassets */,
 				2CDC2FE928F27407000A2CED /* Preview Content */,
@@ -167,10 +179,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C654B9028F638BE001BC820 /* MensGroomingModel.swift in Sources */,
+				2C6BDA7828FE354F00577AA3 /* CartView.swift in Sources */,
+				2C6BDA7A28FE3E7C00577AA3 /* SecondView.swift in Sources */,
+				2C6BDA7C28FE455D00577AA3 /* Writer.swift in Sources */,
 				2C654B8B28F47C77001BC820 /* MensGroomingListUIView.swift in Sources */,
 				2CDC2FE628F27403000A2CED /* ContentView.swift in Sources */,
 				2C654B9328F63A97001BC820 /* Double.swift in Sources */,
 				2CDC2FE428F27403000A2CED /* OrganicoApp.swift in Sources */,
+				2C6BDA7628FE34DE00577AA3 /* ItemDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,11 +31,18 @@ struct ContentView: View {
                      price:9.99)
     ]
     @State private var showingAlert = false
-
+    var writerForSecondView = Writer(
+        name: "Giovanni",
+        surname: "Monaco",
+        website: "createwithswift.com",
+        twitterNickname: "@giovanni_jean"
+    )
 
     
     var columnGrid : [GridItem] = [GridItem(.flexible()),
                     GridItem(.flexible())]
+    // 2. Add a var to define whether SecondView should be showing
+    @State private var showSecondView = false
     
     var body: some View {
         ScrollView {
@@ -47,10 +54,16 @@ struct ContentView: View {
                             .scaledToFill()
                         Text(groom.title)
                         Text(groom.price.asCurrencyWith2Decimals())
-                        Text("Add to Cart")
-                    }.onTapGesture {
-                        print("Hello Print")
-                        self.showingAlert = true
+                        Button(action: {
+                            self.showSecondView.toggle()
+                        }, label: {
+                            Text("Button")
+                        })
+                        // 2. Add a sheet modifier to present SecondView modally
+                        .sheet(isPresented: $showSecondView){
+                            // 5. Use the new SecondView initializer
+                            SecondView(writer: writerForSecondView)
+                        }
                     }
                 }
             }
