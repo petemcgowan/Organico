@@ -11,8 +11,6 @@ import SwiftUI
 struct ItemDetailView: View {
     var groom: GroomingItem
 
-    
-    
     var body: some View {
         VStack(spacing: 8) {
         Text(groom.title)
