@@ -2,8 +2,6 @@
 import SwiftUI
 
 struct MainGroomingView: View {
-    
-    
 
     @State var data2: [GroomingItem] = [
         GroomingItem(id: 1,
@@ -31,29 +29,9 @@ struct MainGroomingView: View {
                      productImage: "BetterYou_Magnesium_Body_Lotion_180ml",
                      price:9.99)
     ]
-    
-    @State var isOn: Bool = true
+
     var columnGrid : [GridItem] = [GridItem(.flexible()),
                     GridItem(.flexible())]
-
-    @State var writerForSecondView = Writer(
-        name: "Giovanni",
-        surname: "Monaco",
-        website: "createwithswift.com",
-        twitterNickname: "@giovanni_jean"
-    )
-
-    @State var writers = [
-    Writer(name: "1", surname: "Bob", website: "web1", twitterNickname: "twitterNickname1"),
-    Writer(name: "2", surname: "Tom", website: "web2", twitterNickname: "twitterNickname2"),
-    Writer(name: "3", surname: "Jane", website: "web3", twitterNickname: "twitterNickname3"),
-    Writer(name: "4", surname: "Karen", website: "web4", twitterNickname: "twitterNickname4")
-    ]
-
-    // 2. Add a var to define whether SecondView should be showing
-    @State private var showSecondView = false
-
-    @State private var showingAlert = false
 
     var body: some View {
         NavigationView {
@@ -66,11 +44,7 @@ struct MainGroomingView: View {
                                 .scaledToFill()
                             Text(groom.title)
                             Text(groom.price.asCurrencyWith2Decimals())
-                            NavigationLink(destination: ControlView(lightIsOn: $isOn, writer: writerForSecondView, writerOfArray: writers[1], groomingOfArray: data2[1])) {
-                                Text("Control Panel")
-                                    .fontWeight(.bold)
-                            }
-                            NavigationLink(destination: ControlView(lightIsOn: $isOn, writer: writerForSecondView, writerOfArray: writers[1], groomingOfArray: groom)) {
+                            NavigationLink(destination: ItemDetailView(groomingOfArray: groom)) {
                                 Text("Control Panel")
                                     .fontWeight(.bold)
                             }
