@@ -3,6 +3,9 @@ import SwiftUI
 
 struct MainGroomingView: View {
 
+    @EnvironmentObject var cartManager: CartManager
+//    @StateObject var cartManager = CartManager()
+    @EnvironmentObject var groomingItems : GroomingItems
     @State var data2: [GroomingItem] = [
         GroomingItem(id: 1,
                      title: "A.Vogel Neem Shampoo (200ml)",
@@ -39,17 +42,44 @@ struct MainGroomingView: View {
                 LazyVGrid (columns: columnGrid) {
                     ForEach(data2, id: \.id) { groom in
                         VStack{
-                            Image(groom.productImage)
-                                .resizable()
-                                .scaledToFill()
-                            Text(groom.title)
-                            Text(groom.price.asCurrencyWith2Decimals())
-                            NavigationLink(destination: ItemDetailView(groomingOfArray: groom)) {
-                                Text("Control Panel")
-                                    .fontWeight(.bold)
+                            NavigationLink(destination: ItemDetailView(groomingOfArray: groom)
+                                            .environmentObject(CartManager())) {
+                                Image(groom.productImage)
+                                    .resizable()
+                                    .scaledToFill()
                             }
+                            Text(groom.title)
+                                .background(.white)
+                                .foregroundColor(.black)
+                            Text(groom.price.asCurrencyWith2Decimals())
+                                .background(.white)
+                                .foregroundColor(.black)
+                                .font(Font.headline.weight(.light))
+                            Button(action: {
+
+                                let groomingItem = GroomingItem(id: groom.id, title: groom.title, productImage: groom.productImage, price: groom.price)
+                                groomingItems.cartContents.append(groomingItem)
+                                cartManager.total += groomingItem.price
+                                print ("Add to cart from Main view")
+                                print(groomingItem.id)
+                                print(groomingItem.price)
+                                print(cartManager.total)
+                                print(groomingItems.cartContents)
+                                print(groomingItems.cartContents.count)
+
+                             }, label: {
+                                 Label("", systemImage: "cart.badge.plus" )
+                             })
                         }
                     }
+                }
+            }
+            .toolbar {
+                NavigationLink {
+                    CartView()
+                        .environmentObject(cartManager)
+                } label: {
+                    CartButton(numberOfGroomingItems: groomingItems.cartContents.count)
                 }
             }
         }
@@ -59,5 +89,6 @@ struct MainGroomingView: View {
 struct MainGroomingView_Previews: PreviewProvider {
     static var previews: some View {
         MainGroomingView()
+    .environmentObject(CartManager ())
     }
 }
