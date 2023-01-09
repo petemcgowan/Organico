@@ -2,7 +2,7 @@
 //  PaymentHandler.swift
 //  Organico
 //
-//  Created by Peter McGowan on 22/10/2022.
+//  Created by Peter McGowan on 22/10/2021.
 //
 
 // Note: The code below was taken from the sample app from https://developer.apple.com/documentation/passkit/apple_pay/offering_apple_pay_in_your_app - shortened and adapted for this application
