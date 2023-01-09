@@ -40,9 +40,9 @@ struct ItemDetailView_Previews: PreviewProvider {
                      price: 9.99)
 
     static var previews: some View {
-        NavigationView {
+//        NavigationView {
             ItemDetailView(groomingOfArray: groomingOfArrayPreview)
                 .environmentObject(CartManager())
-        }
+//        }
     }
 }

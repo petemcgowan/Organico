@@ -2,7 +2,7 @@
 //  CartView.swift
 //  Organico
 //
-//  Created by Peter McGowan on 18/10/2022.
+//  Created by Peter McGowan on 18/10/2021.
 //
 
 import SwiftUI
@@ -13,7 +13,6 @@ import SwiftUI
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var groomingItems: GroomingItems
-
     
     var body: some View {
         ScrollView {

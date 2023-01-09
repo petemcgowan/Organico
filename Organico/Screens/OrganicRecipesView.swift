@@ -1,8 +1,4 @@
-//
-//  OrganicRecipesView.swift
-//
-//  Created by Peter McGowan on 03/01/2022.
-//
+
 
 import SwiftUI
 
@@ -35,33 +31,19 @@ struct OrganicRecipesView: View {
                    recipe: "https://www.organico.ie/news/2013/08/01/fresh-juice-recipes/",
                    recipeImage: "recipeImage" )
     ]
+    
     var body: some View {
-        ForEach(recipes, id: \.id) { recipe in
-            VStack {
-//                NavigationLink(destination: RecipeDetailView(pageToShow: "https://www.google.com")) {
-//                    Text("Recipe link 1")
-//                }
-//                NavigationLink(destination: RecipeDetailView(pageToShow: "https://www.xe.com")) {
-//                    Text("Recipe link 2")
-//                }
-                NavigationLink(destination: RecipeDetailView(pageToShow: recipe.recipe)) {
-                    Text(recipe.title)
-                }
-    //            Button {
-    //                showWebView.toggle()
-    //            } label :{
-    //                Text("Organic Recipes")
-    //            }
-    //            .sheet(isPresented: $showWebView) {
-    //                WebView(url: URL(string: "https://www.google.com")!)
-    //            }
-            }
-            .frame(maxWidth: .infinity,
-                   maxHeight: .infinity)
-            .background(.pink)
-            .clipped()
-        } // foreach
-
+        VStack {
+            ForEach(recipes, id: \.id) { recipe in
+                    NavigationLink(destination: RecipeDetailView(pageToShow: recipe.recipe)) {
+                        Text(recipe.title)
+                    }
+            } // foreach
+        }
+        .frame(maxWidth: .infinity,
+               maxHeight: .infinity)
+        .background(.pink)
+        .clipped()
     }
 }
 

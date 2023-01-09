@@ -1,8 +1,9 @@
 
+
 import SwiftUI
 
 
-struct MainGroomingView: View {
+struct ProductsView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var groomingItems : GroomingItems
     @State var menuOpened = false
@@ -77,9 +78,9 @@ struct MainGroomingView: View {
     }
 }
 
-struct MainGroomingView_Previews: PreviewProvider {
+struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
-        MainGroomingView()
+        ProductsView()
     .environmentObject(CartManager ())
     }
 }
