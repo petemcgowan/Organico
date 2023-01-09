@@ -2,7 +2,7 @@
 //  ProductRow.swift
 //  Organico
 //
-//  Created by Peter McGowan on 22/10/2022.
+//  Created by Peter McGowan on 22/10/2021.
 //
 
 import SwiftUI
