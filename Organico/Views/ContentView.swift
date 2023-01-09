@@ -10,7 +10,7 @@ struct ContentView: View {
 
     var body: some View {
 //        ZStack {
-            MainGroomingView()
+            ProductsView()
                 .environmentObject(groomingItems)
                 .environmentObject(cartManager)
             Button(action: {
