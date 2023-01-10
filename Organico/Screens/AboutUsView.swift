@@ -21,13 +21,13 @@ struct AboutUsView: View {
                     Spacer()
                          .frame(minHeight: 10, maxHeight: 20)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(Color("fontColor"))
                 Group {
                     Text("Organico offers **dedicated, individual service** which depends completely on the **passion and energy** of our **fantastic** team of **staff**, many of whom have been working with us for years. When Organico was started in the early 1990's by Alan Dare it was a one-man show, run by Alan with a little help from his (little) daughters, who loved playing shop! Now Organico comprises a Shop in Bantry a Deli and a Bakery; and in total employs over 30 people. ")
                     Spacer()
                          .frame(minHeight: 10, maxHeight: 20)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(Color("fontColor"))
                 Group {
                     Text("**Our team includes**: Fleur, Christine, Russell, Ceri, Helen, Katrina, Sarune, Mahelia & Laura in the Shop, Viv & Gearoid in Goods Inwards; Dan, Carla and Jessica in the Online Team; Geena and Morwenna in the Bakery, Brid, Sharon, Michelle, Elaine and Niamh in the Deli team, Jaime works on digital strategy, Catherine designs our posters and Eithne in the office makes sure we pay our bills on time! ")
                     Spacer()
@@ -36,7 +36,7 @@ struct AboutUsView: View {
                     Spacer()
                         .frame(minHeight: 10, maxHeight: 20)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(Color("fontColor"))
                 Group {
                     Text("Whenever possible we like to buy from local suppliers. We also like to stock fairly traded goods. We have our own Organic Licence which allows us to sell our vegetables loose rather than having to package them.")
                     Spacer()
@@ -45,12 +45,14 @@ struct AboutUsView: View {
                     Spacer()
                          .frame(minHeight: 5, maxHeight: 10)
                 }
-                .foregroundColor(.white)
+                .foregroundColor(Color("fontColor"))
             } // end vstack
-            .frame(maxWidth: .infinity,
-                   maxHeight: .infinity)
-            .background(.green)
+//            .frame(maxWidth: .infinity,
+//                   maxHeight: .infinity)
+            .background(Color("SafeAreaBackgroundColor"))
             .clipped()
+            .font(Font.custom("Nobile-Regular", size: 14))
+
         } // Scrollview
     }
 }

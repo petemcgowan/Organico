@@ -34,6 +34,8 @@ struct MainView: View {
                         .tabItem{
                             Label("Home", systemImage: "house")
                         }
+                        .background(Color("SafeAreaBackgroundColor"))
+                        .foregroundColor(Color("fontColor"))
                     ProductsView()
                         .tag(Screen.productsPage)
                         .environmentObject(router)
@@ -42,22 +44,28 @@ struct MainView: View {
                         .tabItem{
                             Label("Products", systemImage: "banknote")
                         }
+                        .background(Color("SafeAreaBackgroundColor"))
+                        .foregroundColor(Color("fontColor"))
                     OrganicRecipesView()
                         .tag(Screen.recipePage)
                         .environmentObject(router)
                         .tabItem{
                             Label("Organic Recipes", systemImage: "fork.knife")
                         }
+                        .background(Color("SafeAreaBackgroundColor"))
+                        .foregroundColor(Color("fontColor"))
                     AboutUsView()
                         .tag(Screen.aboutUsPage)
                         .environmentObject(router)
                         .tabItem{
                             Label("About Us", systemImage: "info.circle")
                         }
+                        .background(Color("SafeAreaBackgroundColor"))
+                        .foregroundColor(Color("fontColor"))
                 } // TabView
-                SideMenu(width: UIScreen.main.bounds.width/1.6, heightOffset: UIScreen.main.bounds.height/9, menuOpened: menuOpened, toggleMenu: toggleMenu)
+                SideMenu(width: UIScreen.main.bounds.width/1.6, heightOffset: UIScreen.main.bounds.height/9, menuOpened: menuOpened, toggleMenu: toggleMenu, isShowing: $menuOpened)
             } // ZStack
-            .edgesIgnoringSafeArea(.all)
+//            .edgesIgnoringSafeArea(.all)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarLeading) {
@@ -66,8 +74,9 @@ struct MainView: View {
 //                        self.menuOpened.toggle()
                     }, label: {
                         ZStack(alignment: .topLeading) {
-                            Image(systemName: "plus.circle")
+                            Image(systemName: "list.bullet")
                                 .padding(.top, 5)
+                                .foregroundColor(.black)
                         }
                     })
                 } // toolbaritemgroup
@@ -85,8 +94,6 @@ struct MainView: View {
     } // var body
 
     func toggleMenu() {
-        print (UIScreen.main.bounds.width/1.6)
-        print (UIScreen.main.bounds.height)
         menuOpened.toggle()
     }
 }

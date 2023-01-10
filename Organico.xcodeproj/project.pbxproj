@@ -34,6 +34,10 @@
 		2CDC2FE828F27407000A2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDC2FE728F27407000A2CED /* Assets.xcassets */; };
 		2CDC2FEB28F27407000A2CED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDC2FEA28F27407000A2CED /* Preview Assets.xcassets */; };
 		2CFA9526296B7842003DB828 /* ShippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9525296B7842003DB828 /* ShippingView.swift */; };
+		2CFA9528296C6FF1003DB828 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9527296C6FF1003DB828 /* SideMenuOptionView.swift */; };
+		2CFA952A296C70D6003DB828 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */; };
+		2CFA952C296C776E003DB828 /* ReturnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA952B296C776E003DB828 /* ReturnsView.swift */; };
+		2CFA952F296DD866003DB828 /* Nobile-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA952E296DD866003DB828 /* Nobile-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		2CDC2FE728F27407000A2CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CDC2FEA28F27407000A2CED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CFA9525296B7842003DB828 /* ShippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingView.swift; sourceTree = "<group>"; };
+		2CFA9527296C6FF1003DB828 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		2CFA952B296C776E003DB828 /* ReturnsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnsView.swift; sourceTree = "<group>"; };
+		2CFA952E296DD866003DB828 /* Nobile-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nobile-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,8 @@
 				2C87C6BE29048B2800CCDF6D /* ProductRow.swift */,
 				2C8E602D2965D275000ED1BE /* MenuButton.swift */,
 				2C8E602F29663AC0000ED1BE /* SideMenu.swift */,
+				2CFA9527296C6FF1003DB828 /* SideMenuOptionView.swift */,
+				2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */,
 				2C8E605529672768000ED1BE /* MenuContent.swift */,
 				2C8E605729677FE6000ED1BE /* WebView.swift */,
 			);
@@ -143,6 +153,7 @@
 		2CDC2FE228F27403000A2CED /* Organico */ = {
 			isa = PBXGroup;
 			children = (
+				2CFA952D296DD840003DB828 /* fonts */,
 				2C4120992964979D00DE6B26 /* Info.plist */,
 				2CFA9524296AE2D0003DB828 /* Screens */,
 				2C87C6B92904695A00CCDF6D /* Components */,
@@ -172,10 +183,19 @@
 				2C41209C2964ABAA00DE6B26 /* HomePageView.swift */,
 				2CD8CE5028FF9A1C0068C799 /* ProductsView.swift */,
 				2C4120A02964D64D00DE6B26 /* OrganicRecipesView.swift */,
+				2CFA952B296C776E003DB828 /* ReturnsView.swift */,
 				2C41209E2964AD3C00DE6B26 /* AboutUsView.swift */,
 				2CFA9525296B7842003DB828 /* ShippingView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		2CFA952D296DD840003DB828 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2CFA952E296DD866003DB828 /* Nobile-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +258,7 @@
 			files = (
 				2CDC2FEB28F27407000A2CED /* Preview Assets.xcassets in Resources */,
 				2CDC2FE828F27407000A2CED /* Assets.xcassets in Resources */,
+				2CFA952F296DD866003DB828 /* Nobile-Regular.ttf in Resources */,
 				2C41209B29649A4500DE6B26 /* Launch Screen.storyboard in Resources */,
 				2C654B8D28F4C21B001BC820 /* Mens Grooming.md in Resources */,
 			);
@@ -266,12 +287,15 @@
 				2C8E605629672768000ED1BE /* MenuContent.swift in Sources */,
 				2C87C6B6290468F600CCDF6D /* PaymentHandler.swift in Sources */,
 				2C6BDA7828FE354F00577AA3 /* CartView.swift in Sources */,
+				2CFA952C296C776E003DB828 /* ReturnsView.swift in Sources */,
 				2CDC2FE628F27403000A2CED /* ContentView.swift in Sources */,
+				2CFA9528296C6FF1003DB828 /* SideMenuOptionView.swift in Sources */,
 				2C87C6BF29048B2800CCDF6D /* ProductRow.swift in Sources */,
 				2C4120A12964D64D00DE6B26 /* OrganicRecipesView.swift in Sources */,
 				2C10559D2968DA8700C79251 /* RecipeItem.swift in Sources */,
 				2C41209F2964AD3C00DE6B26 /* AboutUsView.swift in Sources */,
 				2C654B9328F63A97001BC820 /* Double.swift in Sources */,
+				2CFA952A296C70D6003DB828 /* SideMenuViewModel.swift in Sources */,
 				2CDC2FE428F27403000A2CED /* OrganicoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
