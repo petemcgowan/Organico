@@ -36,8 +36,10 @@
 		2CFA9526296B7842003DB828 /* ShippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9525296B7842003DB828 /* ShippingView.swift */; };
 		2CFA9528296C6FF1003DB828 /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9527296C6FF1003DB828 /* SideMenuOptionView.swift */; };
 		2CFA952A296C70D6003DB828 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */; };
-		2CFA952C296C776E003DB828 /* ReturnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA952B296C776E003DB828 /* ReturnsView.swift */; };
 		2CFA952F296DD866003DB828 /* Nobile-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFA952E296DD866003DB828 /* Nobile-Regular.ttf */; };
+		2CFA9531296E4278003DB828 /* NewsletterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9530296E4278003DB828 /* NewsletterView.swift */; };
+		2CFA9533296E4D52003DB828 /* MenuItemFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9532296E4D52003DB828 /* MenuItemFragmentView.swift */; };
+		2CFA9535296E52DF003DB828 /* ContactUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFA9534296E52DF003DB828 /* ContactUsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +74,10 @@
 		2CFA9525296B7842003DB828 /* ShippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingView.swift; sourceTree = "<group>"; };
 		2CFA9527296C6FF1003DB828 /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
-		2CFA952B296C776E003DB828 /* ReturnsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnsView.swift; sourceTree = "<group>"; };
 		2CFA952E296DD866003DB828 /* Nobile-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nobile-Regular.ttf"; sourceTree = "<group>"; };
+		2CFA9530296E4278003DB828 /* NewsletterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterView.swift; sourceTree = "<group>"; };
+		2CFA9532296E4D52003DB828 /* MenuItemFragmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemFragmentView.swift; sourceTree = "<group>"; };
+		2CFA9534296E52DF003DB828 /* ContactUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				2CFA9529296C70D6003DB828 /* SideMenuViewModel.swift */,
 				2C8E605529672768000ED1BE /* MenuContent.swift */,
 				2C8E605729677FE6000ED1BE /* WebView.swift */,
+				2CFA9532296E4D52003DB828 /* MenuItemFragmentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,9 +188,10 @@
 				2C41209C2964ABAA00DE6B26 /* HomePageView.swift */,
 				2CD8CE5028FF9A1C0068C799 /* ProductsView.swift */,
 				2C4120A02964D64D00DE6B26 /* OrganicRecipesView.swift */,
-				2CFA952B296C776E003DB828 /* ReturnsView.swift */,
 				2C41209E2964AD3C00DE6B26 /* AboutUsView.swift */,
 				2CFA9525296B7842003DB828 /* ShippingView.swift */,
+				2CFA9534296E52DF003DB828 /* ContactUsView.swift */,
+				2CFA9530296E4278003DB828 /* NewsletterView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C654B9028F638BE001BC820 /* GroomingItem.swift in Sources */,
+				2CFA9535296E52DF003DB828 /* ContactUsView.swift in Sources */,
 				2C8E605829677FE6000ED1BE /* WebView.swift in Sources */,
 				2C8E605429672348000ED1BE /* MainView.swift in Sources */,
 				2C41209D2964ABAA00DE6B26 /* HomePageView.swift in Sources */,
@@ -287,12 +294,13 @@
 				2C8E605629672768000ED1BE /* MenuContent.swift in Sources */,
 				2C87C6B6290468F600CCDF6D /* PaymentHandler.swift in Sources */,
 				2C6BDA7828FE354F00577AA3 /* CartView.swift in Sources */,
-				2CFA952C296C776E003DB828 /* ReturnsView.swift in Sources */,
 				2CDC2FE628F27403000A2CED /* ContentView.swift in Sources */,
 				2CFA9528296C6FF1003DB828 /* SideMenuOptionView.swift in Sources */,
 				2C87C6BF29048B2800CCDF6D /* ProductRow.swift in Sources */,
+				2CFA9533296E4D52003DB828 /* MenuItemFragmentView.swift in Sources */,
 				2C4120A12964D64D00DE6B26 /* OrganicRecipesView.swift in Sources */,
 				2C10559D2968DA8700C79251 /* RecipeItem.swift in Sources */,
+				2CFA9531296E4278003DB828 /* NewsletterView.swift in Sources */,
 				2C41209F2964AD3C00DE6B26 /* AboutUsView.swift in Sources */,
 				2C654B9328F63A97001BC820 /* Double.swift in Sources */,
 				2CFA952A296C70D6003DB828 /* SideMenuViewModel.swift in Sources */,

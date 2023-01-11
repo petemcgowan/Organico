@@ -64,6 +64,8 @@ struct MainView: View {
                         .foregroundColor(Color("fontColor"))
                 } // TabView
                 SideMenu(width: UIScreen.main.bounds.width/1.6, heightOffset: UIScreen.main.bounds.height/9, menuOpened: menuOpened, toggleMenu: toggleMenu, isShowing: $menuOpened)
+                    .environmentObject(router)
+
             } // ZStack
 //            .edgesIgnoringSafeArea(.all)
             .navigationBarTitleDisplayMode(.inline)

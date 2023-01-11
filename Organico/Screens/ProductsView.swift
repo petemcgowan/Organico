@@ -45,19 +45,20 @@ struct ProductsView: View {
                     VStack{
                         NavigationLink(destination: ItemDetailView(groomingOfArray: groom)
                                         .environmentObject(CartManager())) {
-                            Image(groom.productImage)
-                                .resizable()
-                                .scaledToFill()
+                            VStack {
+                                Image(groom.productImage)
+                                    .resizable()
+                                    .scaledToFill()
+                                Text(groom.title)
+                                    .background(.white)
+                                    .foregroundColor(.black)
+                                Text(groom.price.asCurrencyWith2Decimals())
+                                    .background(.white)
+                                    .foregroundColor(.black)
+                                    .font(Font.headline.weight(.light))
+                            }
                         }
-                        Text(groom.title)
-                            .background(.white)
-                            .foregroundColor(.black)
-                        Text(groom.price.asCurrencyWith2Decimals())
-                            .background(.white)
-                            .foregroundColor(.black)
-                            .font(Font.headline.weight(.light))
                         Button(action: {
-
                             let groomingItem = GroomingItem(id: groom.id, title: groom.title, productImage: groom.productImage, price: groom.price)
                             groomingItems.cartContents.append(groomingItem)
                             cartManager.total += groomingItem.price
@@ -67,9 +68,9 @@ struct ProductsView: View {
                             print(cartManager.total)
                             print(groomingItems.cartContents)
                             print(groomingItems.cartContents.count)
-
                          }, label: {
                              Label("", systemImage: "cart.badge.plus" )
+                                 .foregroundColor(.black)
                          })
                     }
                 } // foreach
