@@ -14,7 +14,8 @@ struct CartButton: View {
         ZStack(alignment: .topTrailing) {
             Image(systemName: "cart")
                 .padding(.top, 5)
-
+                .foregroundColor(.black)
+            
             if numberOfGroomingItems > 0 {
                 Text("\(numberOfGroomingItems)")
                     .font(.caption2).bold()
