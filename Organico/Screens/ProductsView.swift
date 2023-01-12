@@ -6,7 +6,7 @@ import SwiftUI
 struct ProductsView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var groomingItems : GroomingItems
-    @State var menuOpened = false
+//    @State var menuOpened = false
     
     @State var data2: [GroomingItem] = [
         GroomingItem(id: 1,

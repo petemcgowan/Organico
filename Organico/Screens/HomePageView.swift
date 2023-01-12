@@ -3,8 +3,9 @@
 import SwiftUI
 
 struct HomePageView: View {
+    @EnvironmentObject var menuOpenedEnv: MenuOpened
     @EnvironmentObject var router: TabRouter
-    
+
     var body: some View {
         ScrollView {
             VStack {
@@ -104,6 +105,10 @@ struct HomePageView: View {
             .background(.mint)
             .clipped()
         } //scrollview
+        .onAppear {
+            print("Home Page appeared")
+            menuOpenedEnv.menuOpened = false
+        }
     }
 }
 
