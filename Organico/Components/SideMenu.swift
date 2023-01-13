@@ -1,9 +1,4 @@
-//
-//  SideMenu.swift
-//  Organico
-//
-//  Created by Peter McGowan on 04/01/2023.
-//
+
 
 import SwiftUI
 
@@ -12,8 +7,12 @@ struct SideMenu: View{
     let heightOffset: CGFloat
     let menuOpened: Bool
     let toggleMenu: () -> Void
+//    @Binding var isShowing: Bool
+    @EnvironmentObject var router: TabRouter
+    @EnvironmentObject var menuOpenedEnv: MenuOpened
 
     var body: some View {
+        
         ZStack {
             // Dimmed background view
             GeometryReader { _ in
@@ -29,13 +28,21 @@ struct SideMenu: View{
 //            }
             // Menu Content
             HStack {
-                MenuContent()
+                //                MenuContent(isShowing: $isShowing)
+                    MenuContent()
                     .frame(width: width)
                     .offset(x: menuOpened ? 0 : -width, y: heightOffset)
 //                    .offset(x: 0, y: 20)
                     .animation(.default)
+                    .environmentObject(router)
+                    .environmentObject(menuOpenedEnv)
+
                 Spacer()
             }
+        } // zstack
+        .onDisappear {
+            print("SideMenu disappeared")
+//                    isShowing.toggle()
         }
     }
 }
