@@ -102,7 +102,8 @@ struct HomePageView: View {
             } // outer v
             .frame(maxWidth: .infinity,
                    maxHeight: .infinity)
-            .background(.mint)
+            .background(Color("SafeAreaBackgroundColor"))
+//            .background(.mint)
             .clipped()
         } //scrollview
         .onAppear {

@@ -8,6 +8,8 @@ struct AboutUsView: View {
         ScrollView{
             VStack {
                 Group {
+                    Text("About Us")
+                        .font(Font.custom("Nobile-Regular", size: 30))
                     Spacer()
                          .frame(minHeight: 10, maxHeight: 20)
                     Image("HannahandRachel-AboutUsPortrait")

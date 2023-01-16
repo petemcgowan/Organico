@@ -392,8 +392,9 @@ struct ShippingView: View {
                     Spacer()
                 }
             } // outer group
-            .font(Font.custom("Nobile-Regular", size: 15))
         } //scrollview
+        .font(Font.custom("Nobile-Regular", size: 15))
+        .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
             menuOpenedEnv.menuOpened = false
         }

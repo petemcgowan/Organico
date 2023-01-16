@@ -6,7 +6,7 @@ import SwiftUI
 struct ProductsView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var groomingItems : GroomingItems
-//    @State var menuOpened = false
+    //    @State var menuOpened = false
     
     @State var data2: [GroomingItem] = [
         GroomingItem(id: 1,
@@ -34,10 +34,10 @@ struct ProductsView: View {
                      productImage: "BetterYou_Magnesium_Body_Lotion_180ml",
                      price:9.99)
     ]
-
+    
     var columnGrid : [GridItem] = [GridItem(.flexible()),
-                    GridItem(.flexible())]
-
+                                   GridItem(.flexible())]
+    
     var body: some View {
         ScrollView {
             LazyVGrid (columns: columnGrid) {
@@ -50,10 +50,10 @@ struct ProductsView: View {
                                     .resizable()
                                     .scaledToFill()
                                 Text(groom.title)
-                                    .background(.white)
+                                    .background(Color("SafeAreaBackgroundColor"))
                                     .foregroundColor(.black)
                                 Text(groom.price.asCurrencyWith2Decimals())
-                                    .background(.white)
+                                    .background(Color("SafeAreaBackgroundColor"))
                                     .foregroundColor(.black)
                                     .font(Font.headline.weight(.light))
                             }
@@ -68,20 +68,21 @@ struct ProductsView: View {
                             print(cartManager.total)
                             print(groomingItems.cartContents)
                             print(groomingItems.cartContents.count)
-                         }, label: {
-                             Label("", systemImage: "cart.badge.plus" )
-                                 .foregroundColor(.black)
-                         })
+                        }, label: {
+                            Label("", systemImage: "cart.badge.plus" )
+                                .foregroundColor(.black)
+                        })
                     }
                 } // foreach
             } // lazyvgrid
         } //scrollview
+        .font(Font.custom("Nobile-Regular", size: 16))
     }
 }
 
 struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
         ProductsView()
-    .environmentObject(CartManager ())
+            .environmentObject(CartManager ())
     }
 }

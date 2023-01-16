@@ -43,6 +43,7 @@ struct ContactUsView: View {
             }
             .font(Font.custom("Nobile-Regular", size: 16))
         } // scrollview
+        .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
             menuOpenedEnv.menuOpened = false
         }        
