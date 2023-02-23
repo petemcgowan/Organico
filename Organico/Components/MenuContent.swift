@@ -15,7 +15,7 @@ struct MenuContent: View{
 //    @Binding var isShowing: Bool
     @EnvironmentObject var router: TabRouter
     @State var selectedTable: Int?
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
 
     let items: [MenuItem] = [
         MenuItem(text: "Home", imageName: "house", menuDestination: SideMenuViewModel.home),
@@ -33,12 +33,12 @@ struct MenuContent: View{
             VStack(alignment: .leading, spacing: 0) {
                 HStack {
                     Spacer()
-                    Button(action: {menuOpenedEnv.menuOpened.toggle()}, label: {
-                        Image(systemName: "xmark")
-                            .frame(width: 32, height: 32)
-                            .foregroundColor(.white)
-                            .padding()
-                    })
+//                    Button(action: {menuOpenedEnv.menuOpened.toggle()}, label: {
+//                        Image(systemName: "xmark")
+//                            .frame(width: 32, height: 32)
+//                            .foregroundColor(.white)
+//                            .padding()
+//                    })
                 }
                 
                 ForEach(items) { item in
@@ -48,7 +48,7 @@ struct MenuContent: View{
                             Button(action: {
                                 print ("home page clicked")
                                 router.change(to: .homePage)
-                                menuOpenedEnv.menuOpened.toggle()
+//                                menuOpenedEnv.menuOpened.toggle()
                             }, label: {
                                 Image(systemName: item.imageName)
                                     .resizable()
@@ -65,7 +65,7 @@ struct MenuContent: View{
                             Button(action: {
                                 print ("recipes page clicked")
                                 router.change(to: .recipePage)
-                                menuOpenedEnv.menuOpened.toggle()
+//                                menuOpenedEnv.menuOpened.toggle()
                             }, label: {
                                 Image(systemName: item.imageName)
                                     .resizable()
@@ -82,7 +82,7 @@ struct MenuContent: View{
                             Button(action: {
                                 print ("about us page clicked")
                                 router.change(to: .aboutUsPage)
-                                menuOpenedEnv.menuOpened.toggle()
+//                                menuOpenedEnv.menuOpened.toggle()
                             }, label: {
                                 Image(systemName: item.imageName)
                                     .resizable()
@@ -133,7 +133,7 @@ struct MenuContent: View{
         }, set: {
             print("Table \(String(describing: $0)) chosen")
             if $0 == 4 {
-                menuOpenedEnv.menuOpened.toggle()
+//                menuOpenedEnv.menuOpened.toggle()
             }
             self.selectedTable = $0
         })
@@ -157,16 +157,20 @@ struct MenuContent: View{
 //                return AnyView(AboutUsView())
             case SideMenuViewModel.shipping:
                 return AnyView(ShippingView()
-                                .environmentObject(menuOpenedEnv))
+//                                .environmentObject(menuOpenedEnv)
+                )
             case SideMenuViewModel.newsLetter:
                 return AnyView(NewsletterView()
-                                .environmentObject(menuOpenedEnv))
+//                                .environmentObject(menuOpenedEnv)
+                )
             case SideMenuViewModel.contactUs:
                 return AnyView(ContactUsView()
-                                .environmentObject(menuOpenedEnv))
+//                                .environmentObject(menuOpenedEnv)
+                )
             default:
                 return AnyView(HomePageView()
-                                .environmentObject(menuOpenedEnv))
+//                                .environmentObject(menuOpenedEnv)
+                )
 
         }
     }

@@ -9,7 +9,7 @@ struct SideMenu: View{
     let toggleMenu: () -> Void
 //    @Binding var isShowing: Bool
     @EnvironmentObject var router: TabRouter
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
 
     var body: some View {
         
@@ -35,7 +35,7 @@ struct SideMenu: View{
 //                    .offset(x: 0, y: 20)
                     .animation(.default)
                     .environmentObject(router)
-                    .environmentObject(menuOpenedEnv)
+//                    .environmentObject(menuOpenedEnv)
 
                 Spacer()
             }
