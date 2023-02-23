@@ -21,7 +21,7 @@ struct PostModel: Decodable {
 }
 
 struct NewsletterView: View {
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
     @State private var fname: String = ""
     @State private var lname: String = ""
     @State private var eaddress: String = ""
@@ -83,7 +83,7 @@ struct NewsletterView: View {
         .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
             print("Newsletter Page appeared")
-            menuOpenedEnv.menuOpened = false
+//            menuOpenedEnv.menuOpened = false
         }
         //subscribe button
     }

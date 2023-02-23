@@ -3,12 +3,27 @@
 import SwiftUI
 
 struct HomePageView: View {
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
     @EnvironmentObject var router: TabRouter
+    
+
+//    var body: some View {
+//        ScrollView {
+//            Text ("Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom ")
+//                .font(Font.custom("Nobile-Regular", size: 30))
+//                .background(Color("SafeAreaBackgroundColor"))
+//            Text ("Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom ")
+//                .font(Font.custom("Nobile-Regular", size: 30))
+//                .background(Color("SafeAreaBackgroundColor"))
+//            Text ("Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom Enough text to get beyond the bottom ")
+//                .font(Font.custom("Nobile-Regular", size: 30))
+//                .background(Color("SafeAreaBackgroundColor"))
+//        }
+//    }
 
     var body: some View {
-        ScrollView {
             VStack {
+                ScrollView {
                 Group {
                     Image ("hannah-and-rachel-homepage")
                         .resizable()
@@ -53,7 +68,7 @@ struct HomePageView: View {
                         }
                         .background(Color("shopOnlineBoxBackground"))
                         .foregroundColor(Color.white)
-                        
+
                         Button(action: {
                             print ("Recipe router action")
                             router.change(to: .recipePage)
@@ -72,17 +87,15 @@ struct HomePageView: View {
                                 Spacer()
                             }
                          })
-                        
-                        
+
+
                         .background(Color("recipesBoxBackground"))
                         .foregroundColor(Color.white)
                         VStack {
-                            Button(action: {
-                                // TODO: this needs to be newsletter
-                                print ("Recipe router action")
-                                router.change(to: .recipePage)
-                                // the router action
-                            }, label: {
+                            NavigationLink {
+                                NewsletterView()
+        //                            .environmentObject(menuOpenedEnv)
+                            } label: {
                                 Text ("Stay Current")
                                     .font(Font.custom("Nobile-Regular", size: 24))
                                 Spacer()
@@ -93,24 +106,23 @@ struct HomePageView: View {
                                 Text ("Learn More »")
                                     .font(Font.custom("Nobile-Regular", size: 14))
                                 Spacer()
-                            })
+                            }
                         }
                         .background(Color("newsletterBoxBackground"))
                         .foregroundColor(Color.white)
                     } //inner v
+                    .background(Color("SafeAreaBackgroundColor"))
                 }  // group
-            } // outer v
-            .frame(maxWidth: .infinity,
-                   maxHeight: .infinity)
-            .background(Color("SafeAreaBackgroundColor"))
-//            .background(.mint)
-            .clipped()
-        } //scrollview
+                } //scrollview
+            } // outer vstack
+//            .frame(maxWidth: .infinity,
+//                   maxHeight: .infinity)
+//            .clipped()
         .onAppear {
             print("Home Page appeared")
-            menuOpenedEnv.menuOpened = false
+//            menuOpenedEnv.menuOpened = false
         }
-    }
+    } // body
 }
 
 struct HomePageView_Previews: PreviewProvider {

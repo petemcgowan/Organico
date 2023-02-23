@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ShippingView: View {
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
 
     var body: some View {
         
@@ -396,7 +396,7 @@ struct ShippingView: View {
         .font(Font.custom("Nobile-Regular", size: 15))
         .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
-            menuOpenedEnv.menuOpened = false
+//            menuOpenedEnv.menuOpened = false
         }
     }
 }
