@@ -56,7 +56,7 @@ struct AboutUsView: View {
             .font(Font.custom("Nobile-Regular", size: 14))
 
         } // Scrollview
-    }
+    } // body
 }
 
 struct AboutUsView_Previews: PreviewProvider {

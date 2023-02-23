@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactUsView: View {
-    @EnvironmentObject var menuOpenedEnv: MenuOpened
+//    @EnvironmentObject var menuOpenedEnv: MenuOpened
 
     var body: some View {
         ScrollView {
@@ -45,7 +45,7 @@ struct ContactUsView: View {
         } // scrollview
         .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
-            menuOpenedEnv.menuOpened = false
+//            menuOpenedEnv.menuOpened = false
         }        
     }
     
