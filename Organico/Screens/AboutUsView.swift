@@ -9,7 +9,7 @@ struct AboutUsView: View {
             VStack {
                 Group {
                     Text("About Us")
-                        .font(Font.custom("Nobile-Regular", size: 30))
+                        .font(Font.custom("Poppins-Light", size: 30))
                     Spacer()
                          .frame(minHeight: 10, maxHeight: 20)
                     Image("HannahandRachel-AboutUsPortrait")
@@ -18,6 +18,7 @@ struct AboutUsView: View {
                     Spacer()
                          .frame(minHeight: 10, maxHeight: 20)
                 }
+                .foregroundColor(Color("fontColor"))
                 Group {
                     Text("Organico is a small **independent Irish family business** run by sisters Hannah & Rachel Dare.")
                     Spacer()
@@ -53,9 +54,10 @@ struct AboutUsView: View {
 //                   maxHeight: .infinity)
             .background(Color("SafeAreaBackgroundColor"))
             .clipped()
-            .font(Font.custom("Nobile-Regular", size: 14))
+            .font(Font.custom("Poppins-Light", size: 16))
 
         } // Scrollview
+        .background(Color("SafeAreaBackgroundColor"))
     } // body
 }
 

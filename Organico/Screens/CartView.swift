@@ -34,8 +34,6 @@ struct CartView: View {
                         }
                         .padding()
                         
-                        PaymentButton(action: cartManager.pay)
-                            .padding()
                         
                     } else {
                         Text("Your cart is empty.")
@@ -43,7 +41,7 @@ struct CartView: View {
                 }
             }
         }
-        .font(Font.custom("Nobile-Regular", size: 16))
+        .font(Font.custom("Poppins-Light", size: 16))
         .background(Color("SafeAreaBackgroundColor"))
         .navigationTitle(Text("My Cart"))
 
