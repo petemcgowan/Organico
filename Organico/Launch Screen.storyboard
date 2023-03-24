@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,23 +22,33 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-uh-db5">
-                                <rect key="frame" x="73" y="340" width="269" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-uh-db5">
+                                <rect key="frame" x="27" y="348" width="360" height="200"/>
                                 <color key="backgroundColor" name="launch-screen-background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="5hQ-B5-WqL"/>
+                                    <constraint firstAttribute="height" constant="200" id="gVZ-JT-UUD"/>
+                                </constraints>
                             </imageView>
-                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoText" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-Qp-pZQ">
-                                <rect key="frame" x="38" y="146" width="338" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logoText" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-Qp-pZQ">
+                                <rect key="frame" x="70" y="212" width="267" height="130"/>
                                 <color key="backgroundColor" name="launch-screen-background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="bji-5e-Blh"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" name="launch-screen-background"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
+                            <constraint firstItem="S1d-Qp-pZQ" firstAttribute="bottom" secondItem="rgy-uh-db5" secondAttribute="top" constant="-31" id="J8J-56-hbC"/>
+                            <constraint firstItem="S1d-Qp-pZQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MQ2-UQ-wip"/>
+                            <constraint firstItem="rgy-uh-db5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RxH-hz-XgR"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
+                            <constraint firstItem="S1d-Qp-pZQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pqb-IH-Cjv"/>
+                            <constraint firstItem="rgy-uh-db5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uvy-6g-610"/>
                         </constraints>
                     </view>
                 </viewController>
