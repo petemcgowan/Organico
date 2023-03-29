@@ -4,8 +4,9 @@ import SwiftUI
 
 enum Screen {
     case homePage
+    case recipesPage
     case productsPage
-    case recipePage
+    case myRecipesPage
     case aboutUsPage
 }
 
@@ -28,104 +29,133 @@ struct MainView: View {
     @StateObject var groomingItems = GroomingItems()
 //    @State var menuOpened: Bool = false
 //    @StateObject var menuOpenedEnv = MenuOpened()
-
+    @StateObject var recipeItemObject = RecipeItems()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 TabView(selection: $router.screen) {
                     HomePageView()
-                        .tag(Screen.homePage)
-//                        .environmentObject(menuOpenedEnv)
+                         .tag(Screen.homePage)
                         .environmentObject(router)
                         .tabItem{
                             Label("Home", systemImage: "house")
                         }
-//                        .background(Color("SafeAreaBackgroundColor"))
-                        .foregroundColor(Color("fontColor"))                    
+                        .navigationBarTitleDisplayMode(.inline)                        .foregroundColor(Color("fontColor"))
+                        .toolbarBackground(
+                            Color("headerBackgroundColor"), for: .navigationBar, .tabBar)
+                        .toolbarBackground(.visible, for: .navigationBar)
                     
-                    ProductsView()
-                        .tag(Screen.productsPage)
-//                        .environmentObject(menuOpenedEnv)
-                        .environmentObject(router)
-                        .environmentObject(groomingItems)
-                        .environmentObject(cartManager)
-                        .tabItem{
-                            Label("Products", systemImage: "banknote")
-                        }
-                        .background(Color("SafeAreaBackgroundColor"))
-                        .foregroundColor(Color("fontColor"))
-                    OrganicRecipesView()
-                        .tag(Screen.recipePage)
-//                        .environmentObject(menuOpenedEnv)
-                        .environmentObject(router)
+                    RecipesView()
+                        .tag(Screen.recipesPage)
+                        .environmentObject(recipeItemObject)
                         .tabItem{
                             Label("Organic Recipes", systemImage: "fork.knife")
                         }
-                        .background(Color("SafeAreaBackgroundColor"))
                         .foregroundColor(Color("fontColor"))
-                    AboutUsView()
-                        .tag(Screen.aboutUsPage)
-//                        .environmentObject(menuOpenedEnv)
-                        .environmentObject(router)
+                        .toolbarBackground(
+                            Color("headerBackgroundColor"), for: .navigationBar, .tabBar)
+                        .toolbarBackground(.visible, for: .navigationBar)
+
+                    ProductCategoryView()
+                        .tag(Screen.productsPage)
+                        .environmentObject(recipeItemObject)
                         .tabItem{
-                            Label("About Us", systemImage: "info.circle")
+                            Label("Products", systemImage: "banknote")
                         }
-                        .background(Color("SafeAreaBackgroundColor"))
                         .foregroundColor(Color("fontColor"))
-                                } // ZStack
-                } // TabView
+                        .toolbarBackground(
+                            Color("headerBackgroundColor"), for: .navigationBar, .tabBar)
+                        .toolbarBackground(.visible, for: .navigationBar)
+                    
+                    MyRecipesView()
+                        .tag(Screen.myRecipesPage)
+                        .environmentObject(router)
+                        .environmentObject(recipeItemObject)
+                        .tabItem{
+                            Label("My Recipes", systemImage: "frying.pan")
+                        }
+                        .foregroundColor(Color("fontColor"))
+                        .toolbarBackground(
+                            Color("headerBackgroundColor"), for: .navigationBar, .tabBar)
+                        .toolbarBackground(.visible, for: .navigationBar)
+                    
+//                    AboutUsView()
+//                        .tag(Screen.aboutUsPage)
+//                        .tabItem{
+//                            Label("About Us", systemImage: "info.circle")
+//                        }
+//                        .foregroundColor(Color("fontColor"))
+//                        .toolbarBackground(
+//                            Color("headerBackgroundColor"), for: .navigationBar, .tabBar)
+//                        .toolbarBackground(.visible, for: .navigationBar)
+                } // ZStack
+            } // TabView
             .navigationBarTitleDisplayMode(.inline)
+            .opacity(1.0)
             .toolbar {
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing) {
                     NavigationLink {
                         NewsletterView()
-//                            .environmentObject(menuOpenedEnv)
+                        //                            .environmentObject(menuOpenedEnv)
                     } label: {
                         ZStack(alignment: .topLeading) {
                             Image(systemName: "newspaper")
                                 .padding(.top, 5)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("fontColor"))
                         }
                     }
                 }
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing) {
                     NavigationLink {
-                        CartView()
-                            .environmentObject(cartManager)
+                        AboutUsView()
+//                            .environmentObject(cartManager)
                             .environmentObject(groomingItems)
                     } label: {
-                        CartButton(numberOfGroomingItems: groomingItems.cartContents.count)
+//                        CartButton(numberOfGroomingItems: groomingItems.cartContents.count)
+                        ZStack(alignment: .topLeading) {
+                            Image(systemName: "info.circle")
+                                .padding(.top, 5)
+                                .foregroundColor(Color("fontColor"))
+                        }
                     }
                 }
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarLeading) {
                     NavigationLink {
                         ShippingView()
-//                            .environmentObject(menuOpenedEnv)
+                        //                            .environmentObject(menuOpenedEnv)
                     } label: {
                         ZStack(alignment: .topLeading) {
                             Image(systemName: "car.circle")
                                 .padding(.top, 5)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("fontColor"))
                         }
                     }
                 }
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarLeading) {
                     NavigationLink {
                         ContactUsView()
-//                            .environmentObject(menuOpenedEnv)
+                        //                            .environmentObject(menuOpenedEnv)
                     } label: {
                         ZStack(alignment: .topLeading) {
                             Image(systemName: "phone")
                                 .padding(.top, 5)
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("fontColor"))
                         }
                     }
+//                    .toolbarBackground(.red, in: .navigationBar)
                 }
             } // toolbar
+            .opacity(1.0)
+//            .background(Color("headerBackgroundColor"))
+            
         } // nav view
+//        .background(Color("headerBackgroundColor"))
+//        .opacity(1.0)
     } // var body
 
+    
+    
 //    func toggleMenu() {
 //        menuOpenedEnv.menuOpened.toggle()
 //    }

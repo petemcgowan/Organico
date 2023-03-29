@@ -13,27 +13,36 @@ struct ContactUsView: View {
     var body: some View {
         ScrollView {
             VStack {
+                Text("Contact Us")
+                    .font(Font.custom("Poppins-Light", size: 30))
+                    .foregroundColor(Color("fontColor"))
+                Spacer()
+                     .frame(minHeight: 10, maxHeight: 20)
                 Group {
                     Text("Contact Details")
-                        .font(Font.custom("Nobile-Regular", size: 20))
+                        .font(Font.custom("Poppins-Light", size: 20))
                     Text ("Organico,")
                     Text ("2 Glengarriff Road,")
                     Text ("Bantry,")
                     Text ("County Cork,")
                     Text ("Ireland P75 CC80")
                 }
-                .font(Font.custom("Nobile-Regular", size: 16))
+                .font(Font.custom("Poppins-Light", size: 16))
                 Group {
+                    Spacer()
                     HStack {
                         Text("Tel Shop: ")
                             .bold()
                         Text("+353 (0)27 51391")
                     }
+                    Spacer()
+                    Spacer()
                     HStack {
                         Text("For online queries Email: ")
                             .bold()
                         Text("online@organico.ie")
                     }
+                    Spacer()
                     HStack {
                         Text("For general queries Email: ")
                             .bold()
@@ -41,7 +50,8 @@ struct ContactUsView: View {
                     }
                 }
             }
-            .font(Font.custom("Nobile-Regular", size: 16))
+            .font(Font.custom("Poppins-Light", size: 16))
+            .foregroundColor(Color("altFontColor"))
         } // scrollview
         .background(Color("SafeAreaBackgroundColor"))
         .onAppear {
@@ -68,7 +78,7 @@ struct ContactUsView: View {
 //            Group {
 //                Spacer()
 //                Text("Contact Us")
-//                    .font(Font.custom("Nobile-Regular", size: 30))
+//                    .font(Font.custom("Poppins-Light", size: 30))
 //                Spacer()
 //            }
 //
@@ -78,7 +88,7 @@ struct ContactUsView: View {
 //                Text ("Jot us a note and we’ll get back to you as quickly as possible.")
 //                Spacer()
 //            }
-//            .font(Font.custom("Nobile-Regular", size: 16))
+//            .font(Font.custom("Poppins-Light", size: 16))
 //            Group {
 //                TextField("Name", text: .constant(""))
 //                Spacer()
@@ -90,6 +100,6 @@ struct ContactUsView: View {
 //                Spacer()
 //                Spacer()
 //            }
-//            .font(Font.custom("Nobile-Regular", size: 16))
+//            .font(Font.custom("Poppins-Light", size: 16))
 //
 // The straight address part (vs form)
