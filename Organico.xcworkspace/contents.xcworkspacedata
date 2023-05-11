@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:original images">
+   </FileRef>
+   <FileRef
       location = "group:release">
    </FileRef>
    <FileRef
