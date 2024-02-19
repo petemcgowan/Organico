@@ -5,9 +5,6 @@
       location = "group:original images">
    </FileRef>
    <FileRef
-      location = "group:release">
-   </FileRef>
-   <FileRef
       location = "container:Organico.xcodeproj">
    </FileRef>
 </Workspace>
