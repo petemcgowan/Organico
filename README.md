@@ -1,4 +1,13 @@
 <div align="center">
+
+## Main vs design/release project versions
+
+This is the main code project for Organico. You can find its design/release project here:
+https://github.com/petemcgowan/Organico_design_release
+
+<div align="center">
+
+<div align="center">
 <h1>Organico</h1>
 </div>
 
